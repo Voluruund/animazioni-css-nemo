@@ -23,3 +23,99 @@ body, html{
 .btn-outline-primary:hover{
     background-color: var(--main-color);
 }
+
+/* animazione --------------------------- */
+/* i nomi delle classi sono in basse alla direzione   partenza->arrivo */
+.fade-in{
+    animation: slide-in-rl 1000ms ease-in-out forwards;
+}
+
+.f-in-sub{
+    opacity: 0;
+    animation-delay: 1000ms;
+}
+
+@keyframes slide-in-rl {
+    0%{
+        transform: translateX(30px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.slide-in-rl{
+    opacity: 0;
+    animation: slide-in-td 1000ms ease-in-out forwards 1200ms;
+}
+
+@keyframes slide-in-td {
+    0%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.slide-in-dt{
+    opacity: 0;
+    animation: slide-in-dt 1000ms ease-in-out forwards 1200ms;
+}
+
+@keyframes slide-in-dt {
+    0%{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+/* animazioni svg ----------------------------- */
+
+.svg-anim{
+    opacity: 0;
+    animation: svg-fade 600ms ease-in-out forwards;
+    animation-delay: 2000ms;
+    transform-origin: center;
+    /* fa iniziare l'animazione al centro relativo di partenza creando un wrapper attorno ai singoli elementi*/
+    transform-box: fill-box;   
+}
+
+#logo-centrale{
+    animation-delay: 2500ms;
+}
+
+#linux-box{
+    animation-delay: 3000ms;
+}
+
+#windows-box{
+    animation-delay: 3500ms;
+}
+
+#cms-box{
+    animation-delay: 4000ms;
+}
+
+#multidominio-box{
+    animation-delay: 4500ms;
+}
+
+@keyframes svg-fade {
+    0%{
+        opacity: 1;
+        transform: scale(0);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
