@@ -1,0 +1,36 @@
+/* ==================================================
+STILE TRASFORMAZIONE
+================================================== */
+
+/*  trasformazione statica (non c'è un animazione, perchè la proprietà si attiva al caricamento del foglio di stile style.css) */
+/*  COMMENTATE QUESTO STILE SE VOLETE PROVARE I SUCCESSIVI */
+.svg-animation{
+    transform: scale(0.8);
+    transform-origin: center center;
+}
+
+/* ==================================================
+STILE TRASFORMAZIONE + ANIMAZIONE
+================================================== */
+
+/*  trasformazione dinamica tramite le animazioni CSS - per approfondire --> https://www.w3schools.com/css/css3_animations.asp */
+@keyframes scala {
+    0%{
+        transform: scale(1); /* specifico lo stato del componente al momento 0, in questo caso, il momento in cui si carica la pagina */
+    }
+    100%{
+        transform: scale(2); /* specifico lo stato del componente al termine dell'animazione, cioè alla fine */
+    }
+}
+
+.svg-animation{
+    animation-name: scala; /* specifico il nome dell'animazione, in modo che il css sappia richiamarla ( @keyframes scala { ... } ) */
+    animation-duration: 4s; /* specifico la durata dell'animazione */
+    animation-delay: 1s; /* specifico il ritardo dell'animazione */
+    animation-iteration-count: 3; /* specifico quante volte si ripete l'animazione */
+    animation-direction: alternate; /* specifico in che direzione si evolve l'animazione, considerando A il punto di partenza e B quello di arrivo, alternate significa partire da A andare a B e da B tornare ad A */
+    animation-timing-function: linear; /* specifico la curva dell'animazione, in questo caso Linear manterrà costante la velocità dell'animazione */
+    animation-fill-mode: forwards; /* specifico dove si dovrà fermare l'animazione, se al frame di partenza A o al frame di arrivo B */
+    /* stile della trasformazione */
+    transform-origin: center center; 
+}

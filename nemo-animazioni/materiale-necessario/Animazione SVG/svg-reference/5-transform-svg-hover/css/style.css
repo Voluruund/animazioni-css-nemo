@@ -1,0 +1,42 @@
+/* ==================================================
+STILE TRASFORMAZIONE
+================================================== */
+
+/*  inserisco la proprietà overflow visible all'elemento svg in modo da visualizzare il quadrato anche quando esce dallo spazio dell'elemento svg */
+svg{
+    overflow: visible;
+}
+
+/* ==================================================
+STILE TRASFORMAZIONE + ANIMAZIONE
+================================================== */
+
+/*  Diciamo che voglio animare l'SVG in un momento specifico magari durante l'hover su di esso.
+Per farlo posso semplicemente utilizzare la pseudoclasse :hover come per i normali elementi HTML
+Vedi altre pseudoclassi qui --> https://www.w3schools.com/css/css_pseudo_classes.asp */
+
+@keyframes sposta {
+    0%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(-150px);
+    }
+}
+
+.quadrato{
+    /* stile della trasformazione */
+    transform-origin: center center; 
+}
+
+svg:hover .triangolo{
+    animation-name: sposta; /* specifico il nome dell'animazione, in modo che il css sappia richiamarla ( @keyframes scala { ... } ) */
+    animation-duration: 1s; /* specifico la durata dell'animazione */
+    animation-delay: 0s; /* specifico il ritardo dell'animazione */
+    animation-iteration-count: 3; /* specifico quante volte si ripete l'animazione */
+    animation-direction: alternate; /* specifico in che direzione si evolve l'animazione, considerando A il punto di partenza e B quello di arrivo, alternate significa partire da A andare a B e da B tornare ad A */
+    animation-timing-function: linear; /* specifico la curva dell'animazione, in questo caso Linear manterrà costante la velocità dell'animazione */
+    animation-fill-mode: forwards; /* specifico dove si dovrà fermare l'animazione, se al frame di partenza A o al frame di arrivo B */
+    /* stile della trasformazione */
+    transform-origin: center center; 
+}

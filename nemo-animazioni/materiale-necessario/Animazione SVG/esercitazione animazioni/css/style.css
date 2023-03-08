@@ -1,0 +1,184 @@
+/* =============================================== PERSONALIZZAZIONI COLORE =============================================== */
+
+.text-custom {
+    color: #0077ad;
+}
+
+.btn-outline-primary {
+    border-color: #0077ad;
+    color: #0077ad;
+}
+
+.btn-outline-primary:hover {
+    border-color: #0077ad;
+    background-color: #0077ad;
+    color: white;
+}
+
+/* =============================================== ANIMAZIONI TITOLI =============================================== */
+
+@keyframes dissolvenza {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.animazione-dissolvenza {
+    animation-name: dissolvenza;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+.animazione-dissolvenza-sottotitolo {
+    opacity: 0;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+/* =============================================== ANIMAZIONI PARAGRAFO =============================================== */
+
+@keyframes dissolvenza-e-movimento {
+    0% {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.animazione-dissolvenza-movimento {
+    animation-name: dissolvenza-e-movimento;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    opacity: 0;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+/* =============================================== ANIMAZIONI LOGO =============================================== */
+
+@keyframes dissolvenza-e-movimento-logo {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.animazione-dissolvenza-movimento-logo {
+    animation-name: dissolvenza-e-movimento-logo;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    opacity: 0;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+/* =============================================== ANIMAZIONI PULSANTE =============================================== */
+
+@keyframes dissolvenza-e-movimento-pulsante {
+    0% {
+        opacity: 0;
+        transform: translateX(80px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.animazione-dissolvenza-movimento-pulsante {
+    animation-name: dissolvenza-e-movimento-pulsante;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    opacity: 0;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+/* =============================================== ANIMAZIONI SVG =============================================== */
+
+@keyframes animazione-sfondo {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.animazione-sfondo {
+    animation-name: animazione-sfondo;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    transform: scale(0);
+    transform-origin: center center;
+}
+
+.animazione-logo {
+    animation-name: animazione-sfondo;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 2.5s;
+    animation-fill-mode: forwards;
+    transform: scale(0);
+    transform-origin: center center;
+    transform-box: fill-box;
+}
+.animazione-logo-1 {
+    animation-name: animazione-sfondo;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+    transform: scale(0);
+    transform-origin: center center;
+    transform-box: fill-box;
+}
+.animazione-logo-2 {
+    animation-name: animazione-sfondo;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 3.5s;
+    animation-fill-mode: forwards;
+    transform: scale(0);
+    transform-origin: center center;
+    transform-box: fill-box;
+}
+.animazione-logo-3 {
+    animation-name: animazione-sfondo;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+    transform: scale(0);
+    transform-origin: center center;
+    transform-box: fill-box;
+}
+.animazione-logo-4 {
+    animation-name: animazione-sfondo;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 4.5s;
+    animation-fill-mode: forwards;
+    transform: scale(0);
+    transform-origin: center center;
+    transform-box: fill-box;
+}
+
+
+

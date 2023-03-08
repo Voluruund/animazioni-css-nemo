@@ -1,0 +1,49 @@
+/* ==================================================
+STILE TRASFORMAZIONE
+================================================== */
+
+/*  inserisco la proprietà overflow visible all'elemento svg in modo da visualizzare il quadrato anche quando esce dallo spazio dell'elemento svg */
+svg{
+    overflow: visible;
+}
+
+/*  trasformazione statica (non c'è un animazione, perchè la proprietà si attiva al caricamento del foglio di stile style.css) */
+/*  COMMENTATE QUESTO STILE SE VOLETE PROVARE I SUCCESSIVI 
+.svg-animation{
+    transform: transform: translateX(200px) translateY(200px);
+    transform-origin: center center;
+} */
+
+/* ==================================================
+STILE TRASFORMAZIONE + ANIMAZIONE
+================================================== */
+
+/*  trasformazione dinamica tramite le animazioni CSS - per approfondire --> https://www.w3schools.com/css/css3_animations.asp */
+@keyframes sposta {
+    0%{
+        transform: translateX(0px) translateY(0px);
+    }
+    25%{
+        transform: translateX(200px) translateY(0px);
+    }
+    50%{
+        transform: translateX(200px) translateY(200px);
+    }
+    75%{
+        transform: translateX(0px) translateY(200px);
+    }
+    100%{
+        transform: translateX(0px) translateY(0px);
+    }
+}
+
+.svg-animation{
+    animation-name: sposta; /* specifico il nome dell'animazione, in modo che il css sappia richiamarla ( @keyframes scala { ... } ) */
+    animation-duration: 4s; /* specifico la durata dell'animazione */
+    animation-delay: 1s; /* specifico il ritardo dell'animazione */
+    animation-iteration-count: 1; /* specifico quante volte si ripete l'animazione */
+    animation-direction: alternate; /* specifico in che direzione si evolve l'animazione, considerando A il punto di partenza e B quello di arrivo, alternate significa partire da A andare a B e da B tornare ad A */
+    animation-timing-function: linear; /* specifico la curva dell'animazione, in questo caso Linear manterrà costante la velocità dell'animazione */
+    /* stile della trasformazione */
+    transform-origin: center center; 
+}

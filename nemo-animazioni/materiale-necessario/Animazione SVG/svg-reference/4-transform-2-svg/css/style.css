@@ -1,0 +1,57 @@
+/* ==================================================
+STILE TRASFORMAZIONE
+================================================== */
+
+/*  inserisco la proprietà overflow visible all'elemento svg in modo da visualizzare il quadrato anche quando esce dallo spazio dell'elemento svg */
+svg{
+    overflow: visible;
+}
+
+/* ==================================================
+STILE TRASFORMAZIONE + ANIMAZIONE
+================================================== */
+
+/*  ========================================================== ANIMAZIONE QUADRATO */
+
+@keyframes ruota {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.quadrato{
+    animation-name: ruota; /* specifico il nome dell'animazione, in modo che il css sappia richiamarla ( @keyframes scala { ... } ) */
+    animation-duration: 4s; /* specifico la durata dell'animazione */
+    animation-delay: 1s; /* specifico il ritardo dell'animazione */
+    animation-iteration-count: 2; /* specifico quante volte si ripete l'animazione */
+    animation-direction: alternate; /* specifico in che direzione si evolve l'animazione, considerando A il punto di partenza e B quello di arrivo, alternate significa partire da A andare a B e da B tornare ad A */
+    animation-timing-function: linear; /* specifico la curva dell'animazione, in questo caso Linear manterrà costante la velocità dell'animazione */
+    /* stile della trasformazione */
+    transform-origin: center center; 
+}
+
+/*  ========================================================== ANIMAZIONE TRIANGOLO */
+
+@keyframes sposta {
+    0%{
+        transform: translate(0px, 0px);
+    }
+    100%{
+        transform: translate(150px, 150px);
+    }
+}
+
+.triangolo{
+    animation-name: sposta; /* specifico il nome dell'animazione, in modo che il css sappia richiamarla ( @keyframes scala { ... } ) */
+    animation-duration: 4s; /* specifico la durata dell'animazione */
+    animation-delay: 1s; /* specifico il ritardo dell'animazione */
+    animation-iteration-count: 1; /* specifico quante volte si ripete l'animazione */
+    animation-direction: alternate; /* specifico in che direzione si evolve l'animazione, considerando A il punto di partenza e B quello di arrivo, alternate significa partire da A andare a B e da B tornare ad A */
+    animation-timing-function: linear; /* specifico la curva dell'animazione, in questo caso Linear manterrà costante la velocità dell'animazione */
+    animation-fill-mode: forwards; /* specifico dove si dovrà fermare l'animazione, se al frame di partenza A o al frame di arrivo B */
+    /* stile della trasformazione */
+    transform-origin: center center; 
+}

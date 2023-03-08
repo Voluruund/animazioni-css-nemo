@@ -1,0 +1,8 @@
+==============================================
+Articoli di interesse e reference
+==============================================
+
+https://www.w3schools.com/cssref/css3_pr_transform.php --> Panoramica generale su Transform in css
+https://www.w3schools.com/css/css3_animations.asp --> Panoramica generale sulle Animazioni in css
+https://css-tricks.com/transforms-on-svg-elements/ --> Articolo interessante per capire alcuni funzionamenti della trasformazione degli SVG
+https://www.html.it/pag/52859/creare-animazioni-con-css-ad-svg/ --> Articolo interessante per capire alcuni funzionamenti della trasformazione degli SVG
