@@ -1,10 +1,9 @@
-:root{
+:root {
     --main-color: #0077ad;
-    --animate-duration: 800ms;
-    --animate-delay: 1s;
 }
 
-body, html{
+body,
+html {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -12,25 +11,15 @@ body, html{
 }
 
 /* stile generale ----------------------------- */
-
-.custom-color{
+.custom-color {
     color: var(--main-color);
 }
 
-.btn-outline-primary{
+.btn-outline-primary {
     color: var(--main-color);
     border-color: var(--main-color);
 }
 
-.btn-outline-primary:hover{
+.btn-outline-primary:hover {
     background-color: var(--main-color);
-}
-
-svg{
-    overflow: visible;
-}
-
-.svg-transform{
-    transform-origin: center;
-    transform-box: fill-box;
 }
