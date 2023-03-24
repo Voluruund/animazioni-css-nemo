@@ -23,3 +23,8 @@ html {
 .btn-outline-primary:hover {
     background-color: var(--main-color);
 }
+
+/* reset colore tooltip alvaro trigo fullpage js */
+ul > li > a > span{
+    background-color: white !important;
+}
